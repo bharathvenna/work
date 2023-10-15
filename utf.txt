@@ -1,0 +1,21 @@
+sudo echo "LC_ALL=en_US.UTF-8" >> /etc/environment
+sudo echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+sudo echo "LANG=en_US.UTF-8" > /etc/locale.conf
+sudo apt-get clean && apt-get update -y
+sudo apt-get install locales -y
+sudo locale-gen en_US.UTF-8
+
+
+
+step1- sudo nano /etc/default/locale
+
+step2 - update the below line in the file
+
+LANG="en_US.UTF-8"
+LC_CTYPE="en.US.UTF-8"
+
+step3
+
+sudo update-locale LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
+
+finally restart the machine
